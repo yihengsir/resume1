@@ -1,0 +1,792 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="李锋锋老师｜新托福听说读写全科教师｜新托福6分制满分｜高考英语140分｜英语专业八级良好">
+  <title>李锋锋｜托福全科教师</title>
+  <style>
+    :root {
+      --ink: #080a0c;
+      --panel: #101317;
+      --panel-2: #15191e;
+      --paper: #f5f2e9;
+      --muted: #a8acb2;
+      --line: rgba(255, 255, 255, 0.11);
+      --gold: #d6b04f;
+      --gold-bright: #f1ce69;
+      --gold-soft: rgba(214, 176, 79, 0.14);
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--paper);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(214, 176, 79, 0.08), transparent 28rem),
+        linear-gradient(180deg, #07090b 0%, #0c0f12 55%, #080a0c 100%);
+      font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.22;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.13) 0.65px, transparent 0.65px);
+      background-size: 7px 7px;
+      mask-image: linear-gradient(to bottom, black, transparent 88%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    button { font: inherit; }
+
+    .shell {
+      width: min(var(--max), calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(8, 10, 12, 0.82);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-inner {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      color: #0a0c0e;
+      border-radius: 50%;
+      background: var(--gold);
+      font-family: Georgia, serif;
+      letter-spacing: -0.05em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: #b7bac0;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover { color: var(--gold-bright); }
+
+    .print-btn {
+      padding: 9px 15px;
+      color: var(--paper);
+      border: 1px solid rgba(214, 176, 79, 0.45);
+      border-radius: 999px;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .print-btn:hover { background: var(--gold-soft); }
+
+    .hero {
+      min-height: calc(100vh - 68px);
+      display: grid;
+      grid-template-columns: minmax(360px, 0.88fr) minmax(520px, 1.4fr);
+      gap: clamp(48px, 7vw, 100px);
+      align-items: center;
+      padding: 58px 0 68px;
+    }
+
+    .portrait-stage {
+      position: relative;
+      align-self: stretch;
+      min-height: 620px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .portrait-stage::before {
+      content: "";
+      position: absolute;
+      left: 3%;
+      right: 3%;
+      bottom: 4%;
+      height: 76%;
+      border-radius: 47% 47% 14% 38%;
+      background:
+        radial-gradient(circle at 35% 28%, rgba(255, 235, 163, 0.42), transparent 11rem),
+        linear-gradient(145deg, #d4ae4b, #8d691a);
+      box-shadow: 0 35px 90px rgba(214, 176, 79, 0.17);
+      transform: rotate(-4deg);
+    }
+
+    .portrait-stage::after {
+      content: "LF";
+      position: absolute;
+      top: 4%;
+      left: 0;
+      color: rgba(255, 255, 255, 0.045);
+      font: 700 clamp(120px, 14vw, 220px)/1 Georgia, serif;
+      letter-spacing: -0.1em;
+    }
+
+    .portrait {
+      position: relative;
+      z-index: 2;
+      width: min(92%, 430px);
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 28px 32px rgba(0, 0, 0, 0.5));
+    }
+
+    .availability {
+      position: absolute;
+      z-index: 4;
+      right: -10px;
+      bottom: 8%;
+      width: 132px;
+      height: 132px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: #12100b;
+      border: 6px solid rgba(8, 10, 12, 0.88);
+      border-radius: 50%;
+      background: var(--gold-bright);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.55;
+      transform: rotate(7deg);
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gold-bright);
+      font-size: 13px;
+      font-weight: 750;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 36px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Songti SC", "STSong", serif;
+      font-size: clamp(70px, 8vw, 120px);
+      font-weight: 600;
+      line-height: 0.94;
+      letter-spacing: 0.06em;
+    }
+
+    .role {
+      margin: 22px 0 0;
+      color: var(--gold-bright);
+      font-size: clamp(23px, 3vw, 36px);
+      font-weight: 760;
+      letter-spacing: 0.05em;
+    }
+
+    .sub-role {
+      margin: 12px 0 0;
+      color: #c4c6ca;
+      font-size: 18px;
+      letter-spacing: 0.08em;
+    }
+
+    .credentials {
+      margin: 36px 0 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .credential {
+      padding: 20px 17px 17px;
+      min-height: 122px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012));
+    }
+
+    .credential strong {
+      display: block;
+      color: var(--gold-bright);
+      font: 600 32px/1 Georgia, serif;
+    }
+
+    .credential span {
+      display: block;
+      margin-top: 11px;
+      color: #d9dadd;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .bio {
+      margin: 30px 0 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.95;
+    }
+
+    .bio strong { color: var(--paper); }
+
+    .hero-actions {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      padding: 13px 22px;
+      border: 1px solid rgba(214, 176, 79, 0.65);
+      border-radius: 2px;
+      color: #13100a;
+      background: var(--gold-bright);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .button.secondary {
+      color: var(--paper);
+      background: transparent;
+      border-color: var(--line);
+    }
+
+    .section {
+      position: relative;
+      padding: 110px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-kicker {
+      margin: 0 0 14px;
+      color: var(--gold-bright);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .section h2 {
+      margin: 0;
+      max-width: 760px;
+      font-family: Georgia, "Songti SC", serif;
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 600;
+      line-height: 1.18;
+      letter-spacing: 0.02em;
+    }
+
+    .section-intro {
+      margin: 22px 0 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    .subjects {
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .subject {
+      min-height: 270px;
+      padding: 28px;
+      background: var(--panel);
+      transition: background 180ms ease, transform 180ms ease;
+    }
+
+    .subject:hover {
+      position: relative;
+      z-index: 2;
+      background: #171b20;
+      transform: translateY(-4px);
+    }
+
+    .subject-index {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--gold-bright);
+      font: 600 17px/1 Georgia, serif;
+    }
+
+    .subject-index span:last-child {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 7px var(--gold-soft);
+    }
+
+    .subject h3 {
+      margin: 34px 0 12px;
+      font-size: 24px;
+      letter-spacing: 0.06em;
+    }
+
+    .subject p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .method {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: clamp(50px, 8vw, 110px);
+      align-items: start;
+    }
+
+    .method-quote {
+      margin: 0;
+      padding: 34px 0 0 30px;
+      color: #e8e4d9;
+      border-left: 2px solid var(--gold);
+      font-family: Georgia, "Songti SC", serif;
+      font-size: clamp(26px, 3.2vw, 42px);
+      line-height: 1.6;
+    }
+
+    .method-steps {
+      display: grid;
+      gap: 16px;
+    }
+
+    .method-step {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 20px;
+      padding: 24px 26px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.018);
+    }
+
+    .method-step b {
+      color: var(--gold-bright);
+      font: 600 27px/1 Georgia, serif;
+    }
+
+    .method-step h3 { margin: 0 0 8px; font-size: 18px; }
+
+    .method-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .cases {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .case {
+      position: relative;
+      overflow: hidden;
+      padding: 30px;
+      min-height: 370px;
+      border: 1px solid var(--line);
+      background: linear-gradient(160deg, #171b20, #0e1114);
+    }
+
+    .case::after {
+      content: attr(data-letter);
+      position: absolute;
+      right: -8px;
+      bottom: -22px;
+      color: rgba(214, 176, 79, 0.07);
+      font: 600 150px/1 Georgia, serif;
+    }
+
+    .case-tag {
+      display: inline-flex;
+      padding: 6px 10px;
+      color: var(--gold-bright);
+      border: 1px solid rgba(214, 176, 79, 0.35);
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+    }
+
+    .case h3 {
+      margin: 24px 0 22px;
+      font-size: 23px;
+      line-height: 1.45;
+    }
+
+    .case dl { margin: 0; }
+
+    .case-row {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 12px;
+      padding: 13px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .case dt {
+      color: var(--gold-bright);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .case dd {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .note {
+      margin: 24px 0 0;
+      color: #7f848c;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .cta {
+      display: grid;
+      grid-template-columns: 1.4fr auto;
+      gap: 32px;
+      align-items: end;
+      padding: 52px;
+      border: 1px solid rgba(214, 176, 79, 0.34);
+      background:
+        linear-gradient(120deg, rgba(214, 176, 79, 0.12), transparent 50%),
+        var(--panel);
+    }
+
+    .cta h2 { font-size: clamp(34px, 4.5vw, 58px); }
+
+    .cta p {
+      margin: 18px 0 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .cta-meta {
+      color: var(--gold-bright);
+      font-size: 13px;
+      font-weight: 750;
+      letter-spacing: 0.12em;
+      white-space: nowrap;
+    }
+
+    footer {
+      padding: 35px 0 55px;
+      color: #6f747b;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 700ms ease, transform 700ms ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 0.82fr 1.18fr; gap: 34px; }
+      .portrait-stage { min-height: 520px; }
+      .credentials { grid-template-columns: 1fr; }
+      .credential { min-height: auto; }
+      .subjects { grid-template-columns: repeat(2, 1fr); }
+      .method { grid-template-columns: 1fr; }
+      .cases { grid-template-columns: 1fr; }
+      .case { min-height: auto; }
+    }
+
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 30px, var(--max)); }
+      .nav-inner { min-height: 58px; }
+      .nav-links a { display: none; }
+      .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        padding-top: 30px;
+      }
+      .portrait-stage { min-height: 510px; order: 2; }
+      .hero-copy { order: 1; }
+      h1 { font-size: clamp(62px, 23vw, 92px); }
+      .role { font-size: 25px; }
+      .credentials { grid-template-columns: repeat(3, 1fr); }
+      .credential { padding: 16px 10px; }
+      .credential strong { font-size: 25px; }
+      .credential span { font-size: 12px; }
+      .section { padding: 76px 0; }
+      .subjects { grid-template-columns: 1fr; }
+      .subject { min-height: auto; }
+      .method-step { grid-template-columns: 52px 1fr; padding: 22px 18px; }
+      .cta { grid-template-columns: 1fr; padding: 32px 24px; }
+      .cta-meta { white-space: normal; }
+    }
+
+    @media (max-width: 440px) {
+      .portrait-stage { min-height: 460px; }
+      .availability { width: 108px; height: 108px; font-size: 11px; }
+      .credentials { gap: 7px; }
+      .credential strong { font-size: 22px; }
+      .bio { font-size: 15px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .subject { transition: none; }
+    }
+
+    @media print {
+      @page { size: A4; margin: 12mm; }
+      body { background: #fff; color: #111; }
+      body::before, .nav, .hero-actions, .availability { display: none !important; }
+      .shell { width: 100%; }
+      .hero { min-height: auto; grid-template-columns: 34% 1fr; padding: 0 0 18mm; }
+      .portrait-stage { min-height: 132mm; }
+      .portrait-stage::before { background: #d6b04f; }
+      .portrait-stage::after { display: none; }
+      h1, .section h2, .role, .credential span, .bio strong { color: #111; }
+      .sub-role, .bio, .section-intro, .subject p, .method-step p, .case dd { color: #555; }
+      .credential, .subject, .method-step, .case, .cta { background: #fff; border-color: #bbb; }
+      .credential strong, .eyebrow, .section-kicker, .subject-index, .method-step b, .case-tag, .case dt, .cta-meta { color: #8c6510; }
+      .section { padding: 16mm 0; border-color: #ccc; break-inside: avoid; }
+      .subjects { background: #ccc; border-color: #ccc; }
+      .case { min-height: auto; }
+      .reveal { opacity: 1; transform: none; }
+      footer { padding-bottom: 0; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="页面导航">
+    <div class="shell nav-inner">
+      <a class="brand" href="#top" aria-label="返回顶部">
+        <span class="brand-mark">LF</span>
+        <span>李锋锋 · 教师简历</span>
+      </a>
+      <div class="nav-links">
+        <a href="#expertise">教学专长</a>
+        <a href="#method">教学方法</a>
+        <a href="#cases">提分案例</a>
+        <button class="print-btn" type="button" onclick="window.print()">打印 / 导出 PDF</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="shell hero">
+      <div class="portrait-stage" aria-label="李锋锋老师形象照">
+        <img class="portrait" src="assets/portrait.png" alt="李锋锋老师身穿西装的职业形象照">
+        <div class="availability">备考笔试<br>／ 面试<br>全程规划</div>
+      </div>
+
+      <div class="hero-copy reveal">
+        <p class="eyebrow">TOEFL &amp; GAOKAO ENGLISH</p>
+        <h1>李锋锋</h1>
+        <p class="role">托福听 · 说 · 读 · 写全科教师</p>
+        <p class="sub-role">天津外国语大学 · 中英同声传译硕士</p>
+
+        <div class="credentials" aria-label="核心资历">
+          <div class="credential">
+            <strong>6 / 6</strong>
+            <span>新托福 6 分制<br>满分教师</span>
+          </div>
+          <div class="credential">
+            <strong>140</strong>
+            <span>高考英语<br>个人成绩</span>
+          </div>
+          <div class="credential">
+            <strong>TEM-8</strong>
+            <span>英语专业八级<br>成绩良好</span>
+          </div>
+        </div>
+
+        <p class="bio">
+          具备扎实的语言专业背景与口笔译训练，拥有国际会议交替传译经历。熟悉托福考试逻辑与题型方法，
+          擅长将复杂语言知识拆解为可执行的训练步骤。<strong>以诊断定位、能力建模和阶段复盘为核心，
+          帮助学生同步提升应试成绩与真实语言能力。</strong>
+        </p>
+
+        <div class="hero-actions">
+          <a class="button" href="#cases">查看高考提分案例</a>
+          <a class="button secondary" href="#expertise">了解教学专长</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="expertise">
+      <div class="shell reveal">
+        <p class="section-kicker">01 · TOEFL EXPERTISE</p>
+        <h2>四科一体，建立真正可迁移的英语能力</h2>
+        <p class="section-intro">从语言输入到逻辑输出，以考试评分标准为坐标，打通听、说、读、写之间的能力链路。</p>
+
+        <div class="subjects">
+          <article class="subject">
+            <div class="subject-index"><span>01</span><span></span></div>
+            <h3>听力 Listening</h3>
+            <p>场景信号识别、结构化笔记与同义替换训练，帮助学生抓住讲座主线与关键信息。</p>
+          </article>
+          <article class="subject">
+            <div class="subject-index"><span>02</span><span></span></div>
+            <h3>口语 Speaking</h3>
+            <p>从内容组织到语音表达，建立限时作答框架，强化信息完整度、逻辑与流利度。</p>
+          </article>
+          <article class="subject">
+            <div class="subject-index"><span>03</span><span></span></div>
+            <h3>阅读 Reading</h3>
+            <p>以篇章结构为核心训练定位与推理，减少逐词翻译，提高限时阅读效率与正确率。</p>
+          </article>
+          <article class="subject">
+            <div class="subject-index"><span>04</span><span></span></div>
+            <h3>写作 Writing</h3>
+            <p>拆解评分标准，训练观点展开、论据衔接与语言升级，让写作表达准确且有层次。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="method">
+      <div class="shell method reveal">
+        <div>
+          <p class="section-kicker">02 · TEACHING METHOD</p>
+          <blockquote class="method-quote">不是记住更多模板，<br>而是让每一步训练<br>都对应明确的失分原因。</blockquote>
+        </div>
+        <div class="method-steps">
+          <article class="method-step">
+            <b>01</b>
+            <div><h3>入学诊断</h3><p>通过真题与口头访谈判断词汇、语法、理解、表达及时间分配问题。</p></div>
+          </article>
+          <article class="method-step">
+            <b>02</b>
+            <div><h3>分层规划</h3><p>根据目标分数与备考周期拆分周目标，兼顾知识补缺与限时训练。</p></div>
+          </article>
+          <article class="method-step">
+            <b>03</b>
+            <div><h3>实战精练</h3><p>以真题为载体训练方法，让每次练习都能沉淀为可复用的解题策略。</p></div>
+          </article>
+          <article class="method-step">
+            <b>04</b>
+            <div><h3>复盘迭代</h3><p>跟踪错因与输出质量，及时调整训练配比，形成稳定提分闭环。</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <div class="shell reveal">
+        <p class="section-kicker">03 · GAOKAO CASES</p>
+        <h2>高考英语提分案例</h2>
+        <p class="section-intro">针对不同分数段的典型失分结构，采用差异化方案，让训练重点与阶段目标清晰可追踪。</p>
+
+        <div class="cases">
+          <article class="case" data-letter="A">
+            <span class="case-tag">案例 A · 基础夯实型</span>
+            <h3>词汇语法有断点，做题主要依赖语感</h3>
+            <dl>
+              <div class="case-row"><dt>学情</dt><dd>基础题反复失分，长难句理解慢，阅读正确率波动。</dd></div>
+              <div class="case-row"><dt>方案</dt><dd>高频词汇分层复现，语法错因归类，每日精读与句子拆解并行。</dd></div>
+              <div class="case-row"><dt>目标</dt><dd>减少基础失分，建立稳定的阅读理解与语法判断能力。</dd></div>
+            </dl>
+          </article>
+
+          <article class="case" data-letter="B">
+            <span class="case-tag">案例 B · 阅读突破型</span>
+            <h3>单篇耗时过长，后半场正确率明显下降</h3>
+            <dl>
+              <div class="case-row"><dt>学情</dt><dd>逐词翻译，定位不准，对同义替换与干扰项识别不足。</dd></div>
+              <div class="case-row"><dt>方案</dt><dd>篇章结构阅读、题干关键词定位、限时训练与错项证据复盘。</dd></div>
+              <div class="case-row"><dt>目标</dt><dd>压缩单篇用时，提升信息定位速度与阅读正确率稳定性。</dd></div>
+            </dl>
+          </article>
+
+          <article class="case" data-letter="C">
+            <span class="case-tag">案例 C · 高分冲刺型</span>
+            <h3>客观题稳定，写作与续写成为分数瓶颈</h3>
+            <dl>
+              <div class="case-row"><dt>学情</dt><dd>内容完整但语言层次单一，衔接生硬，亮点表达不稳定。</dd></div>
+              <div class="case-row"><dt>方案</dt><dd>按评分维度精修，积累主题表达，训练段落推进与句式升级。</dd></div>
+              <div class="case-row"><dt>目标</dt><dd>提高内容、语言和结构的完成度，向 140 分档稳定冲刺。</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <p class="note">注：以上为典型学情与教学方案展示，未使用虚构学生姓名或前后分数；正式宣传时可替换为经授权的真实案例数据。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell reveal">
+        <div class="cta">
+          <div>
+            <p class="section-kicker">PERSONALIZED LEARNING</p>
+            <h2>看见问题，拆解问题，<br>把进步落实到每一次练习。</h2>
+            <p>适用于托福全科备考、高考英语基础提升、高分冲刺与笔面试语言能力训练。</p>
+          </div>
+          <div class="cta-meta">李锋锋 · 英语全科教师</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">TEACHER PROFILE · TOEFL / GAOKAO ENGLISH</div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
